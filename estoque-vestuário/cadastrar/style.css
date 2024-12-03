@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+:root {
+  --primary-color: #6d4c41; /* Marrom suave */
+  --secondary-color: #3e2723; /* Tom mais escuro de marrom */
+  --highlight-color: #f8f1e5; /* Bege claro */
+  --button-color: #8d6e63; /* Cor dos botões, mais suave */
+  --button-hover-color: #a1887f; /* Hover mais sutil */
+  --border-color: #d0c6b1; /* Cor suave para bordas */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Sombra leve */
+  --background-color: #f8f1e5; /* Fundo bege claro */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Playfair Display', serif; /* Fonte mais clássica */
+}
+
+body {
+  background-color: var(--background-color);
+  padding: 0 6vw;
+  font-size: 16px;
+  color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+header {
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  cursor: default;
+  user-select: none;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px; /* Limita a largura para evitar quebra */
+  margin-top: 40px;
+  gap: 20px;
+  flex-wrap: wrap; /* Permite que os elementos se ajustem em telas menores */
+}
+
+.div-imagem {
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px dotted var(--primary-color); /* Usando o marrom suave */
+  border-radius: 20px;
+}
+
+.imagem-frase {
+  margin: 0 5rem;
+  text-align: center;
+  font-size: 20px;
+  color: var(--secondary-color);
+  user-select: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 600px;
+}
+
+form input {
+  width: 100%;
+  height: 3rem;
+  background-color: transparent;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0 20px;
+  font-size: 1rem;
+  color: var(--secondary-color);
+  margin-bottom: 15px; /* Adicionando espaço entre os campos */
+}
+
+form input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.div-numbers {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.div-numbers input {
+  width: 48%; /* Ajusta para não ultrapassar o limite da tela */
+}
+
+footer {
+  display: flex;
+  height: 20vh;
+  justify-content: center;
+  width: 100%;
+}
+
+.botao {
+  background-color: var(--button-color);
+  color: var(--branco);
+  width: 10rem;
+  height: 3rem;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: none;
+  transition: all 200ms;
+  cursor: pointer;
+  user-select: none;
+}
+
+.botao:hover {
+  background-color: transparent;
+  color: var(--preto);
+  border: 3px solid var(--preto);
+}
+
+.botao:active {
+  transform: scale(1.05);
+}
+
+.botao-voltar {
+  position: absolute;
+  left: 6vw;
+}
+
+.botao-cadastrar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 6vh;
+  margin: auto;
+}

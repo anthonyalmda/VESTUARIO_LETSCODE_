@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vestuário | Inventory</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Vestuário</h1>
+            <button id="cadastrar" class="btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                
+            </button>
+        </header>
+
+        <main>
+            <div class="table-container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Imagem</th>
+                            <th>Nome</th>
+                            <th>Descrição</th>
+                            <th>Preço</th>
+                            <th>Quantidade</th>
+                            <th>Fornecedor</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+            </div>
+        </main>
+
+        <div id="divEditar" class="modal">
+            <div class="modal-content">
+                <h2>Editar Item</h2>
+                <form id="formulario-editar">
+                    <div class="form-group">
+                        <label for="nome-editar">Nome</label>
+                        <input type="text" id="nome-editar" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="descricao-editar">Descrição</label>
+                        <textarea id="descricao-editar" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="preco-editar">Preço</label>
+                        <input type="number" id="preco-editar" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="estoque-editar">Estoque</label>
+                        <input type="number" id="estoque-editar" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fornecedor-editar">Fornecedor</label>
+                        <input type="text" id="fornecedor-editar" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="imagem-editar">URL da Imagem</label>
+                        <input type="url" id="imagem-editar" required>
+                    </div>
+                    <div class="modal-actions">
+                        <button type="submit" class="btn-primary">Atualizar</button>
+                        <button type="button" id="fechar-editar" class="btn-secondary">Fechar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
